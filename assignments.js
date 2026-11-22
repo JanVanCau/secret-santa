@@ -1,2 +1,2 @@
 // Gemaakt door scripts/draw.mjs — niet spieken! 🎅
-window.SANTA_DATA = "==Qf9JCZyFGajlmUiojIhRmbpxkIsISYk5WaMJiOisWaSJCLi4WYKJiOiQmchh2YpJlIsISZ0R3bsJXYoNkI6ISYu5WZpNlIsIyapJlI6ISZ0R3bsJXYoNkIsISYu5WZpNlI6IibhpkI7pjIzJXahBnIsICZxMDNiFDNzImY4UmI6ICZuV3byJye";
+window.SANTA_DATA = "==Qf9JSZ0R3bsJXYoNkI6ISYk5WaMJCLiEmbuVWaTJiOisWaSJCLi4WYKJiOiQmchh2YpJlIsIyapJlI6ISYu5WZpNlIsICZyFGajlmUiojIlRHdvxmchh2QiwiIhRmbpxkI6IibhpkI7pjIzJXahBnIsIiYhNmZjV2NzUzN2UmI6ICZuV3byJye";
