@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Secret Santa</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎁</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@700&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="snow" aria-hidden="true"></canvas>
+  <canvas id="confetti" aria-hidden="true"></canvas>
+
+  <main class="card" id="card">
+    <header>
+      <p class="eyebrow">✦ Familie-editie ✦</p>
+      <h1>Secret Santa</h1>
+    </header>
+
+    <!-- Step 1: ask for name -->
+    <section id="ask" class="view">
+      <p class="lead">Ho ho ho! Typ je naam en ontdek wie jij deze kerst mag verwennen.</p>
+      <form id="form" autocomplete="off">
+        <input id="name" type="text" placeholder="Jouw naam…" aria-label="Jouw naam" required autofocus />
+        <button type="submit" id="go">
+          <span>Uitpakken</span> <span aria-hidden="true">🎁</span>
+        </button>
+      </form>
+      <p class="hint">⚠️ Je kan dit maar één keer doen — zorg dat niemand over je schouder meekijkt!</p>
+      <p id="msg" class="msg" role="status" aria-live="polite"></p>
+    </section>
+
+    <!-- Step 2: the gift -->
+    <section id="reveal" class="view hidden" aria-live="polite">
+      <p class="lead" id="hello"></p>
+      <div class="stage">
+        <div class="glow"></div>
+        <div class="gift" id="gift">
+          <div class="lid"><div class="bow"><i></i><i></i></div></div>
+          <div class="box"></div>
+        </div>
+        <div class="tag" id="tag">
+          <small>Jij koopt een cadeau voor</small>
+          <strong id="who"></strong>
+        </div>
+      </div>
+      <p class="hint" id="after">🤫 Geheim houden! Je kan dit niet opnieuw bekijken, dus onthoud het goed.</p>
+    </section>
+  </main>
+
+  <footer>Met ❤️ gemaakt voor de familie</footer>
+
+  <script src="config.js"></script>
+  <script src="assignments.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
