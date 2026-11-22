@@ -95,6 +95,38 @@
       const r = gift.getBoundingClientRect();
       burst(r.left + r.width / 2, r.top + 20);
     });
+
+    // Once the name tag has fully appeared: keep it visible for 3s,
+    // fade the whole reveal out over 4s, then reset for the next person.
+    const tag = $("tag");
+    const view = $("reveal");
+    tag.addEventListener("animationend", function shown(ev) {
+      if (ev.target !== tag || ev.animationName !== "tagUp") return;
+      tag.removeEventListener("animationend", shown);
+      setTimeout(() => {
+        view.classList.add("fading");
+        view.addEventListener("animationend", function faded(e) {
+          if (e.target !== view || e.animationName !== "fadeOut") return;
+          view.removeEventListener("animationend", faded);
+          reset();
+        });
+      }, 3000);
+    });
+  }
+
+  function reset() {
+    const view = $("reveal");
+    view.classList.add("hidden");
+    view.classList.remove("fading");
+    $("gift").classList.remove("wobble", "open");
+    $("gift").parentElement.classList.remove("opened");
+    $("who").textContent = "";
+    $("hello").textContent = "";
+    msg.className = "msg";
+    msg.textContent = "";
+    input.value = "";
+    $("ask").classList.remove("hidden");
+    input.focus();
   }
 
   // ---------- Snow ----------
