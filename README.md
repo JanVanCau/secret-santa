@@ -6,7 +6,7 @@ Participants: Jan, Charlotte, Sienna, Richard, Rik, Linda.
 
 ## How it works
 
-- `scripts/draw.mjs` makes the draw ahead of time (nobody gets themselves) and writes it, lightly scrambled, into `assignments.js`. Run it again for a fresh draw; that also resets who has looked.
+- `scripts/draw.mjs` makes the draw ahead of time (nobody gets themselves) and writes it, lightly scrambled, into `assignments.js`. Run it again using `node scripts/draw.mjs`for a fresh draw; that also resets who has looked.
 - When someone reveals, their name is marked as "used". GitHub Pages can't store anything, so that mark goes to a free **Firebase Realtime Database**. Without one, it's only remembered in that person's own browser.
 
 ## 1. Set up the shared "already used" list (5 min, free)
